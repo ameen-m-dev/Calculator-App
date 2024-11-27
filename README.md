@@ -2,6 +2,9 @@
 
 A simple, responsive calculator web application built with HTML, CSS, and JavaScript. This calculator supports both mouse clicks and keyboard input for basic arithmetic operations.
 
+## Live Demo
+Try the calculator here: [Calculator App](https://calculator-app-gold-two.vercel.app/)
+
 ## Features
 
 - Basic arithmetic operations (addition, subtraction, multiplication, division)
@@ -49,6 +52,8 @@ calculator/
 
 1. Clone the repository or download the files
 2. Open `index.html` in a web browser
+
+Or visit the [live version](https://calculator-app-gold-two.vercel.app/) hosted on Vercel.
 
 ## Features Implementation
 
