@@ -1,36 +1,36 @@
 h1 {
     text-align: center;
     color: #3d3d3d;
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* Responsive font size */
+    font-size: clamp(2rem, 3vw, 3rem);
 }
 
 table {
     border: 1px solid #ccc;
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    min-width: 300px; /* Prevent too small */
-    width: 25%; /* Relative width */
-    max-width: 400px; /* Prevent too large */
+    min-width: 600px; 
+    width: 50%;        
+    max-width: 800px;  
 }
 
 #resultField {
     width: 100%;
     border-radius: 10px;
     box-sizing: border-box;
-    min-height: 50px;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    height: 80px;      
+    font-size: 32px;   
     text-align: right;
-    padding: 5px;
+    padding: 15px;
 }
 
 input[type="button"] {
-    min-width: 50px;
-    min-height: 50px;
-    width: 100%; /* Fill available space */
-    font-size: clamp(1rem, 1.2vw, 1.125rem);
-    margin: 2px;
+    min-width: 100px;  
+    min-height: 100px; 
+    width: 100%;
+    font-size: 28px;  
+    margin: 5px;
     border: none;
     border-radius: 5px;
     background-color: #f0f0f0;
@@ -44,11 +44,13 @@ input[type="button"]:hover {
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     table {
-        width: 90%;
+        width: 95%;
+        min-width: 450px;  
     }
     
     input[type="button"] {
-        min-width: 40px;
-        min-height: 40px;
+        min-width: 80px;
+        min-height: 80px;
+        font-size: 24px;
     }
 }
