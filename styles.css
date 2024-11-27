@@ -1,0 +1,54 @@
+h1 {
+    text-align: center;
+    color: #3d3d3d;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* Responsive font size */
+}
+
+table {
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 300px; /* Prevent too small */
+    width: 25%; /* Relative width */
+    max-width: 400px; /* Prevent too large */
+}
+
+#resultField {
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 50px;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    text-align: right;
+    padding: 5px;
+}
+
+input[type="button"] {
+    min-width: 50px;
+    min-height: 50px;
+    width: 100%; /* Fill available space */
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+    
+    input[type="button"] {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
