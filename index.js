@@ -6,42 +6,13 @@ function displayValue(val) {
     resultField.value += val;
 }
 
-// Add Event Listener to the Input Field
-document.addEventListener('keydown', function(event) {
-    event.preventDefault();
-    
-    // Using regex to check all valid inputs
-    if (/^[\d+\-*/.']$/.test(event.key)) {
-        displayValue(event.key);
-    }
-    else if (event.key === 'Enter') {
-        calculateResult();
-    }
-    else if (event.key === 'Escape' || event.key === 'Delete') {
-        clearDisplay();
-    }
-    else if (event.key === 'Backspace') {
-        resultField.value = resultField.value.slice(0, -1);
-    }
-});
-
-// Also prevent pasting and direct input
-resultField.addEventListener('keydown', function(event) {
-    event.preventDefault();
-});
-
-// Prevent paste
-resultField.addEventListener('paste', function(event) {
-    event.preventDefault();
-});
-
 // Clears the calculator display and resets any stored values
-function clearDisplay(){
+function clearDisplay() {
     resultField.value = "";
 }
 
 // Evaluates the current expression and returns the result
-function calculateResult(){
+function calculateResult() {
     try {
         // Evaluate the Mathematical Expression
         let result = math.evaluate(resultField.value);
@@ -53,3 +24,22 @@ function calculateResult(){
         resultField.value = "Error";
     }
 }
+
+// Add Event Listener for Keyboard Inputs
+document.addEventListener('keydown', function(event) {
+    event.preventDefault();
+
+    if (/^[\d+\-*/.]$/.test(event.key)) {
+        displayValue(event.key); // Append valid keys
+    } else if (event.key === 'Enter') {
+        calculateResult(); // Evaluate result on Enter
+    } else if (event.key === 'Escape' || event.key === 'Delete') {
+        clearDisplay(); // Clear display on Escape or Delete
+    } else if (event.key === 'Backspace') {
+        resultField.value = resultField.value.slice(0, -1); // Handle Backspace
+    }
+});
+
+// Prevent direct input and paste
+resultField.addEventListener('input', (event) => event.preventDefault());
+resultField.addEventListener('paste', (event) => event.preventDefault());
